@@ -1,15 +1,16 @@
 package org.fluentlenium.example.spring.config;
 
+import static org.openqa.selenium.remote.DesiredCapabilities.chrome;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import static org.openqa.selenium.remote.DesiredCapabilities.chrome;
 
 public enum BrowserType {
 
@@ -17,8 +18,10 @@ public enum BrowserType {
         @Override
         public WebDriver getWebDriver() {
         	System.setProperty("webdriver.chrome.driver", "chromedriver.exe"); 
-            
-            return new ChromeDriver();
+        	ChromeDriver chromeDriver = new ChromeDriver();
+        	//chromeDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        	chromeDriver.manage().window().maximize();   
+            return chromeDriver;
         }
 
         @Override

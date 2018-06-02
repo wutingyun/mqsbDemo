@@ -30,6 +30,7 @@ public class LoginPage extends FluentPage {
 
     public MainPage loginButton() {
     	loginButton.click();
+    	
         return mainPage;
     }
 }

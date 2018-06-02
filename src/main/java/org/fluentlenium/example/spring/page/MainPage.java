@@ -1,5 +1,7 @@
 package org.fluentlenium.example.spring.page;
 
+import java.util.concurrent.TimeUnit;
+
 import org.fluentlenium.core.FluentPage;
 import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.core.annotation.PageUrl;
@@ -20,9 +22,25 @@ public class MainPage extends FluentPage {
 		clickTongZhiGongGao.click();
 		return this;
 	}
+	
+		
+	
+	/*public void awaitUntilDisplay(FluentWebElement fluentWebElement) {
+		 await().atMost(5, TimeUnit.SECONDS).until(fluentWebElement).displayed();
+	}*/
+
+	public void waitSec(int sec) {
+		try {
+			Thread.sleep(sec*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public FaSongLieBiaoPage clickFaSongLieBiao() {
 		clickFaSongLieBiao.click();
+		
+	//	switchTo(element);
 		return fasongliebiaoPage;
 	}
 

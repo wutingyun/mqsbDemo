@@ -40,7 +40,7 @@ public class GlobalSettings {
 	public static Properties getProperties() {
 		Properties prop = new Properties();
 		try {
-			String dir_name="E:\\workspace\\FluentLenium_examples\\src\\main\\resources\\config.properties";
+			String dir_name="src\\main\\resources\\config.properties";
 			FileInputStream file = new FileInputStream(dir_name);
 			prop.load(file);
 			file.close();
