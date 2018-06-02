@@ -3,17 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.fluentlenium.example.spring.Case1">
+      <class name="org.fluentlenium.example.spring.case1">
         <methods>
-          <include name="setup"/>
+          <include name="noticeCase01"/>
           <include name="beforeMethod"/>
-          <include name="visitGoogle"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
-          <include name="down"/>
           <include name="afterMethod"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- org.fluentlenium.example.spring.Case1 -->
+      </class> <!-- org.fluentlenium.example.spring.case1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
