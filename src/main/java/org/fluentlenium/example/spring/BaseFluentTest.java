@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class ExampleFluentTest extends FluentTestNg{
+public class BaseFluentTest extends FluentTestNg{
 
 	SeleniumBrowserConfigProperties config =new SeleniumBrowserConfigProperties();
 
@@ -27,7 +27,7 @@ public class ExampleFluentTest extends FluentTestNg{
 	}
 
 	public static void main(String[] args) {
-		ExampleFluentTest exampleFluentTest = new ExampleFluentTest();
+		BaseFluentTest exampleFluentTest = new BaseFluentTest();
 		System.out.println(exampleFluentTest.getBaseUrl());
 	//	System.out.println(exampleFluentTest.newWebDriver());
 	}

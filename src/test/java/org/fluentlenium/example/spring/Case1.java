@@ -1,22 +1,28 @@
 package org.fluentlenium.example.spring;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.fluentlenium.adapter.junit.After;
 import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.core.hook.wait.Wait;
+import org.fluentlenium.example.spring.base.Account;
 import org.fluentlenium.example.spring.page.FaSongLieBiaoPage;
 import org.fluentlenium.example.spring.page.LoginPage;
 import org.fluentlenium.example.spring.page.MainPage;
+import org.fluentlenium.example.spring.util.AccountRead;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
+
 @Wait(timeout = 5, timeUnit = TimeUnit.SECONDS)
-public class case1 extends ExampleFluentTest {
+public class Case1 extends BaseFluentTest {
 	String title;
 	String content;
+	List<Account> accounts;
 
 	@Page
 	private LoginPage loginPage;// 登录页面
@@ -28,6 +34,8 @@ public class case1 extends ExampleFluentTest {
 	@BeforeTest
 	public void beforeTest() {
 
+		accounts = AccountRead.getAll();//获取数据，用户名和密码
+		
 		title = "通知公告标题180602-001";
 		content = "通知公告内容180602-001";
 	}
@@ -37,9 +45,10 @@ public class case1 extends ExampleFluentTest {
 		try {
 			// 通过登录页面，输入用户名和密码，进入主页面。
 			goTo(loginPage);
-			loginPage.usernameTextIn("sqxcy001");
+			loginPage.login(accounts.get(0));
+		/*	loginPage.usernameTextIn("sqxcy001");
 			loginPage.passwordTextIn("123456");
-			loginPage.loginButton();
+			loginPage.loginButton();*/
 
 			// 在主页面，点击一级菜单通知公告，点击二级菜单发送列表。
 			mainPage.clickTongZhiGongGao();
