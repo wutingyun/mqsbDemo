@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="96540" started-at="2018-06-04T01:44:09Z" finished-at="2018-06-04T01:45:45Z">
+  <suite name="Default suite" duration-ms="21535" started-at="2018-06-04T03:52:43Z" finished-at="2018-06-04T03:53:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="96540" started-at="2018-06-04T01:44:09Z" finished-at="2018-06-04T01:45:45Z">
+    <test name="Default test" duration-ms="21535" started-at="2018-06-04T03:52:43Z" finished-at="2018-06-04T03:53:04Z">
       <class name="org.fluentlenium.example.spring.Case1">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.fluentlenium.example.spring.Case1@36d585c]" name="beforeTest" is-config="true" duration-ms="159" started-at="2018-06-04T09:44:09Z" finished-at="2018-06-04T09:44:09Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.fluentlenium.example.spring.Case1@e720b71]" name="beforeTest" is-config="true" duration-ms="144" started-at="2018-06-04T11:52:43Z" finished-at="2018-06-04T11:52:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:org.fluentlenium.example.spring.Case1@36d585c]" name="beforeMethod" is-config="true" duration-ms="3902" started-at="2018-06-04T09:44:09Z" finished-at="2018-06-04T09:44:13Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:org.fluentlenium.example.spring.Case1@e720b71]" name="beforeMethod" is-config="true" duration-ms="3964" started-at="2018-06-04T11:52:43Z" finished-at="2018-06-04T11:52:47Z">
           <params>
             <param index="0">
               <value>
@@ -20,33 +20,33 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@1afdd473]]>
+                <![CDATA[org.testng.TestRunner@5e0e82ae]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="noticeCase01()[pri:0, instance:org.fluentlenium.example.spring.Case1@36d585c]" name="noticeCase01" duration-ms="91312" started-at="2018-06-04T09:44:13Z" finished-at="2018-06-04T09:45:44Z">
+        <test-method status="PASS" signature="noticeCase01()[pri:0, instance:org.fluentlenium.example.spring.Case1@e720b71]" name="noticeCase01" duration-ms="16789" started-at="2018-06-04T11:52:47Z" finished-at="2018-06-04T11:53:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noticeCase01 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.fluentlenium.example.spring.Case1@36d585c]" name="afterMethod" is-config="true" duration-ms="1151" started-at="2018-06-04T09:45:44Z" finished-at="2018-06-04T09:45:45Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.fluentlenium.example.spring.Case1@e720b71]" name="afterMethod" is-config="true" duration-ms="625" started-at="2018-06-04T11:53:04Z" finished-at="2018-06-04T11:53:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=noticeCase01 status=SUCCESS method=Case1.noticeCase01()[pri:0, instance:org.fluentlenium.example.spring.Case1@36d585c] output={null}]]]>
+                <![CDATA[[TestResult name=noticeCase01 status=SUCCESS method=Case1.noticeCase01()[pri:0, instance:org.fluentlenium.example.spring.Case1@e720b71] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:org.fluentlenium.example.spring.Case1@36d585c]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-06-04T09:45:45Z" finished-at="2018-06-04T09:45:45Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:org.fluentlenium.example.spring.Case1@e720b71]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-06-04T11:53:04Z" finished-at="2018-06-04T11:53:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:org.fluentlenium.example.spring.Case1@36d585c]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-06-04T09:45:45Z" finished-at="2018-06-04T09:45:45Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:org.fluentlenium.example.spring.Case1@e720b71]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-06-04T11:53:04Z" finished-at="2018-06-04T11:53:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
