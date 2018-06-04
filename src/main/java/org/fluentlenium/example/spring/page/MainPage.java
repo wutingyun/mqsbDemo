@@ -1,7 +1,5 @@
 package org.fluentlenium.example.spring.page;
 
-import java.util.concurrent.TimeUnit;
-
 import org.fluentlenium.core.FluentPage;
 import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.core.annotation.PageUrl;
@@ -12,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 public class MainPage extends FluentPage {
 	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[4]/a/span")
 	private FluentWebElement clickTongZhiGongGao; // 点击一级菜单 通知公告
+	
 	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[4]/ul/li[2]/a")
 	private FluentWebElement clickFaSongLieBiao;// 点击二级菜单 发送列表
 
@@ -23,7 +22,6 @@ public class MainPage extends FluentPage {
 		return this;
 	}
 	
-		
 	
 	/*public void awaitUntilDisplay(FluentWebElement fluentWebElement) {
 		 await().atMost(5, TimeUnit.SECONDS).until(fluentWebElement).displayed();
@@ -39,8 +37,6 @@ public class MainPage extends FluentPage {
 
 	public FaSongLieBiaoPage clickFaSongLieBiao() {
 		clickFaSongLieBiao.click();
-		
-	//	switchTo(element);
 		return fasongliebiaoPage;
 	}
 

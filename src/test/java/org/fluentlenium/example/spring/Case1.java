@@ -3,7 +3,6 @@ package org.fluentlenium.example.spring;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.fluentlenium.adapter.junit.After;
 import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.core.hook.wait.Wait;
 import org.fluentlenium.example.spring.base.Account;
@@ -11,15 +10,19 @@ import org.fluentlenium.example.spring.page.FaSongLieBiaoPage;
 import org.fluentlenium.example.spring.page.LoginPage;
 import org.fluentlenium.example.spring.page.MainPage;
 import org.fluentlenium.example.spring.util.AccountRead;
+import org.fluentlenium.example.spring.util.CommonRandUtil;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-
 @Wait(timeout = 5, timeUnit = TimeUnit.SECONDS)
 public class Case1 extends BaseFluentTest {
+	/**
+	 * 门前三包>>通知公告>>发送列表，新增通知公告。
+	 */
+	
 	String title;
 	String content;
 	List<Account> accounts;
@@ -36,8 +39,8 @@ public class Case1 extends BaseFluentTest {
 
 		accounts = AccountRead.getAll();//获取数据，用户名和密码
 		
-		title = "通知公告标题180602-001";
-		content = "通知公告内容180602-001";
+		title = "通知公告新增_标题" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
+		content = "通知公告新增_内容" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
 	}
 
 	@Test
@@ -46,9 +49,6 @@ public class Case1 extends BaseFluentTest {
 			// 通过登录页面，输入用户名和密码，进入主页面。
 			goTo(loginPage);
 			loginPage.login(accounts.get(0));
-		/*	loginPage.usernameTextIn("sqxcy001");
-			loginPage.passwordTextIn("123456");
-			loginPage.loginButton();*/
 
 			// 在主页面，点击一级菜单通知公告，点击二级菜单发送列表。
 			mainPage.clickTongZhiGongGao();
@@ -63,6 +63,7 @@ public class Case1 extends BaseFluentTest {
 			String newTitle = fasongliebiaoPage.getTitle();
 			// 将新增的标题与查询出来的标题一致，则说明新增成功。
 			Assert.assertEquals(newTitle, title, "通知公告新增不成功");
+			
 		} catch (Exception e) {
 			takeScreenShot("D:\\主页面.jpg");
 			takeHtmlDump("D:\\error.html");

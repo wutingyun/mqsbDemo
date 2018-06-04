@@ -3,7 +3,6 @@ package org.fluentlenium.example.spring.page;
 import java.util.concurrent.TimeUnit;
 
 import org.fluentlenium.core.FluentPage;
-import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.core.annotation.PageUrl;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.openqa.selenium.support.FindBy;
