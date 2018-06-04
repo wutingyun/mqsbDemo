@@ -141,6 +141,10 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite configfailurepolicy=&quot;continue&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;mqsb&quot; skipfailedinvocationcounts=&quot;true&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test verbose=&quot;10&quot; name=&quot;Case1&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;org.fluentlenium.example.spring.Case1&quot;&gt;
@@ -191,12 +195,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addNoticeCase01')
 data.setCell(0, 2, 'org.fluentlenium.example.spring.Case1')
-data.setCell(0, 3, 15655);
+data.setCell(0, 3, 14997);
 window.suiteTableData['mqsb']= { tableData: data, tableDiv: 'times-div-mqsb'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-mqsb">
               </div> <!-- times-div-mqsb -->
             </div> <!-- times-div -->
@@ -235,24 +239,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void org.fluentlenium.example.spring.Case1.addNoticeCase01(), org.testng.TestRunner@217ed35e)</span>
-                <span class="method-start">146 ms</span>
+                <span class="method-name">beforeMethod(public void org.fluentlenium.example.spring.Case1.addNoticeCase01(), org.testng.TestRunner@1757cd72)</span>
+                <span class="method-start">133 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addNoticeCase01</span>
-                <span class="method-start">4075 ms</span>
+                <span class="method-start">3984 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=addNoticeCase01 status=SUCCESS method=Case1.addNoticeCase01()[pri:0, instance:org.f...)</span>
-                <span class="method-start">19731 ms</span>
+                <span class="method-start">18982 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">20331 ms</span>
+                <span class="method-start">19585 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">20333 ms</span>
+                <span class="method-start">19587 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

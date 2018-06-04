@@ -21,7 +21,7 @@ public enum BrowserType {
 			//ChromeDriver chromeDriver = new ChromeDriver();
 			
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("D:chromedriver.exe");
+			options.setBinary("C:/Users/Administrator/AppData/Local/Google/Chrome/Application/chrome.exe");
 			ChromeDriver chromeDriver = new ChromeDriver(options);
 			
 			chromeDriver.manage().window().maximize();
