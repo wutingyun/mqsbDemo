@@ -44,7 +44,7 @@ public class Case1 extends BaseFluentTest {
 	}
 
 	@Test
-	public void noticeCase01() {
+	public void addNoticeCase01() {
 		try {
 			// 通过登录页面，输入用户名和密码，进入主页面。
 			goTo(loginPage);
