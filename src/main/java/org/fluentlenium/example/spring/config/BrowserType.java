@@ -26,7 +26,7 @@ public enum BrowserType {
 			
 			chromeDriver.manage().window().maximize();
 			return chromeDriver;
-		}
+		} 
 
 		@Override
 		protected DesiredCapabilities getBrowserCapabilities() {
