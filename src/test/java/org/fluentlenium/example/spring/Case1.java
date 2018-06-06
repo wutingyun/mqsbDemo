@@ -39,8 +39,8 @@ public class Case1 extends BaseFluentTest {
 
 		accounts = AccountRead.getAll();//获取数据，用户名和密码
 		
-		title = "通知公告新增_标题" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
-		content = "通知公告新增_内容" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
+		title = "通知公告新增标题_自动化测试" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
+		content = "通知公告新增内容_自动化测试" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
 	}
 
 	@Test
